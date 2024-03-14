@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hepatitis C Prediction</title>
+</head>
+<body>
+    <h1>Hepatitis C Prediction</h1>
+    <form method="post" action="{{ url_for('predict') }}">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label><br>
+
+        <label for="fever">Fever:</label><br>
+        <input type="radio" id="yes" name="fever" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="fever" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="nausea">Nausea:</label><br>
+        <input type="radio" id="yes" name="nausea" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="nausea" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="fatigue">Fatigue:</label><br>
+        <input type="radio" id="yes" name="fatigue" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="fatigue" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="malaise">Malaise:</label><br>
+        <input type="radio" id="yes" name="malaise" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="malaise" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="anorexia">Anorexia:</label><br>
+        <input type="radio" id="yes" name="anorexia" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="anorexia" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="liver_big">Liver Big:</label><br>
+        <input type="radio" id="yes" name="liver_big" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="liver_big" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="liver_firm">Liver Firm:</label><br>
+        <input type="radio" id="yes" name="liver_firm" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="liver_firm" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="spleen_palpable">Spleen Palpable:</label><br>
+        <input type="radio" id="yes" name="spleen_palpable" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="spleen_palpable" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="spiders">Spiders:</label><br>
+        <input type="radio" id="yes" name="spiders" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="spiders" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="ascites">Ascites:</label><br>
+        <input type="radio" id="yes" name="ascites" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="ascites" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="varices">Varices:</label><br>
+        <input type="radio" id="yes" name="varices" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="varices" value="No" required>
+        <label for="no">No</label><br>
+
+        <label for="bilirubin">Bilirubin:</label><br>
+        <input type="number" id="bilirubin" name="bilirubin" step=".01" min="0" max="2" required><br>
+
+        <label for="alk_phosphate">Alkaline Phosphate:</label><br>
+        <input type="number" id="alk_phosphate" name="alk_phosphate" required><br>
+
+        <label for="sgot">SGOT:</label><br>
+        <input type="number" id="sgot" name="sgot" required><br>
+
+        <label for="albumin">Albumin:</label><br>
+        <input type="number" id="albumin" name="albumin" step=".1" min="2" max="5" required><br>
+
+        <label for="protime">Prothrombin Time:</label><br>
+        <input type="number" id="protime" name="protime" required><br>
+
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
