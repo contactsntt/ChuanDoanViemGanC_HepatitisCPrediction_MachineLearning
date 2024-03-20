@@ -19,7 +19,7 @@ Nghiên cứu này nhằm mục đích chọn các thuật toán để dự đo�
 
 Về nghiên cứu này, trong bước đầu tiên, trước khi sử dụng các kỹ thuật học máy, mô hình của bộ dữ liệu, quá trình tiền xử lý và tầm quan trọng của tính năng được xem xét. Bước thứ hai là sử dụng và phát triển các mô hình học máy khác nhau. Cuối cùng, trong bước cuối cùng, hiệu suất của từng mô hình được đánh giá theo ma trận nhầm, độ chính xác, tỉ lệ chuẩn để dự đoán viêm gan C sau khi so sánh hiệu suất của các mô hình này. Các mô hình này được phát triển bằng các chương trình Python.
 
- <img src="https://github.com/contactsntt/ChuanDoanViemGanC_HepatitisCPrediction_MachineLearning/assets/134685355/4f95c8a8-9053-42e3-862d-418b906f41cd">
+ <img src="https://private-user-images.githubusercontent.com/134685355/314562444-9ebb6673-8426-4a12-ac4c-18a5fa59a39a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTA5NDkwNzUsIm5iZiI6MTcxMDk0ODc3NSwicGF0aCI6Ii8xMzQ2ODUzNTUvMzE0NTYyNDQ0LTllYmI2NjczLTg0MjYtNGExMi1hYzRjLTE4YTVmYTU5YTM5YS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMyMFQxNTMyNTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNzEyMzYxYjkwOWQ5OTJjZmNiY2E4MjMzMGUyMzU0ZjE3ZDE2NjAxMDhiOTY4NGZhODk5MTY4YzcyYmMyODNjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.f-GTtofdlwsuHPugaZc5VeQfaQ7x28GbVPVhOsg_S6Y">
  
 
 2.1.	Mô tả tập dữ liệu:
