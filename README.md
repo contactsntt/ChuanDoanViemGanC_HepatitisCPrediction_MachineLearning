@@ -19,7 +19,7 @@ Nghiên cứu này nhằm mục đích chọn các thuật toán để dự đo�
 
 Về nghiên cứu này, trong bước đầu tiên, trước khi sử dụng các kỹ thuật học máy, mô hình của bộ dữ liệu, quá trình tiền xử lý và tầm quan trọng của tính năng được xem xét. Bước thứ hai là sử dụng và phát triển các mô hình học máy khác nhau. Cuối cùng, trong bước cuối cùng, hiệu suất của từng mô hình được đánh giá theo ma trận nhầm, độ chính xác, tỉ lệ chuẩn để dự đoán viêm gan C sau khi so sánh hiệu suất của các mô hình này. Các mô hình này được phát triển bằng các chương trình Python.
 
- <img src="https://drive.google.com/file/d/1hptEQzLGTxbxXn76INFYw-zIwxD4kjef/view?usp=drive_link">
+ <img src="https://nguyenthanhtam562-my.sharepoint.com/personal/nguyenthanhtam_nguyenthanhtam562_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fnguyenthanhtam%5Fnguyenthanhtam562%5Fonmicrosoft%5Fcom%2FDocuments%2FANH%5FGITHUB%2FAnh%5FGitHub%5FViemGanC%2FHinh1%2Epng&parent=%2Fpersonal%2Fnguyenthanhtam%5Fnguyenthanhtam562%5Fonmicrosoft%5Fcom%2FDocuments%2FANH%5FGITHUB%2FAnh%5FGitHub%5FViemGanC&ga=1">
 
 2.1.	Mô tả tập dữ liệu:
 
