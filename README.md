@@ -2,6 +2,7 @@
 # Chuẩn Đoán Viêm Gan Siêu Vi C   (Hepatitis C Prediction)
 
 - I.	Tổng Quan:
+  
 Tính Trừu tượng: Viêm gan C là một bệnh nhiễm trùng gan do siêu vi khuẩn viêm gan C (HCV) gây ra. Do khởi phát các triệu chứng muộn,  để chuẩn đoán sớm là rất khó. Dự đoán trước khi bị tổn thương gan là quá trình xuyên suốt. Mục tiêu chính của nghiên cứu này là sử dụng thuật toán để dự đoán bệnh dựa trên dữ liệu xét nghiệm để chuẩn đoán và điều trị bệnh ở giai đoạn đầu. Trong nghiên cứu này, các thuật toán sử dụng như  Logistic Regression, Random Forest, Gradient Boosting, Support Vector Machine …. 
 Hiệu suất của các kỹ thuật này được so sánh về ma trận để xác định một phương pháp thích hợp để dự đoán bệnh. Phân tích SVM và XGBoost (với độ chính xác và AUC cao nhất trong số các thử nghiệm mẫu, >80%) có thể là công cụ hiệu quả cho các chuyên gia y tế sử dụng xét nghiệm thông thường và là dữ liệu để dự đoán viêm gan C.
 1.	Giới thiệu: 
