@@ -1,23 +1,34 @@
 # ChuanDoanViemGanC_HepatitisCPrediction_MachineLearning
 # Chuẩn Đoán Viêm Gan Siêu Vi C   (Hepatitis C Prediction)
 
-- I.	Tổng Quan:
+I.	Tổng Quan:
   
 Tính Trừu tượng: Viêm gan C là một bệnh nhiễm trùng gan do siêu vi khuẩn viêm gan C (HCV) gây ra. Do khởi phát các triệu chứng muộn,  để chuẩn đoán sớm là rất khó. Dự đoán trước khi bị tổn thương gan là quá trình xuyên suốt. Mục tiêu chính của nghiên cứu này là sử dụng thuật toán để dự đoán bệnh dựa trên dữ liệu xét nghiệm để chuẩn đoán và điều trị bệnh ở giai đoạn đầu. Trong nghiên cứu này, các thuật toán sử dụng như  Logistic Regression, Random Forest, Gradient Boosting, Support Vector Machine …. 
 Hiệu suất của các kỹ thuật này được so sánh về ma trận để xác định một phương pháp thích hợp để dự đoán bệnh. Phân tích SVM và XGBoost (với độ chính xác và AUC cao nhất trong số các thử nghiệm mẫu, >80%) có thể là công cụ hiệu quả cho các chuyên gia y tế sử dụng xét nghiệm thông thường và là dữ liệu để dự đoán viêm gan C.
+
 1.	Giới thiệu: 
-Có rất nhiều bệnh ảnh hưởng đến gan của con người. Gan là một trong những bộ phận quan trọng. Bệnh viêm gan C do một loại vi-rút gây ra có thể gây tử vong nếu không được phát hiện. Nó có thể tiến từ từ và thậm chí gây ung thư. Trong một số trường hợp, nó có thể không hoạt động trong cơ thể thậm chí 10 – 20 năm. Một số người bị viêm gan C có thể chỉ bị trong thời gian ngắn, nhưng đối với hơn một nửa số người nhiễm vi-rút, nó sẽ tiến triển thành một bệnh nhiễm trùng mãn tính. Chỉ 30% bệnh nhân nhiễm vi rút viêm gan C tự hồi phục trong vòng sáu tháng, trong khi hầu hết bệnh nhân bị nhiễm vi rút mãn tính. Các vấn đề sức khỏe có khả năng gây tử vong có thể do viêm gan C mãn tính là xơ gan và ung thư gan. 
+Có rất nhiều bệnh ảnh hưởng đến gan của con người. Gan là một trong những bộ phận quan trọng. Bệnh viêm gan C do một loại vi-rút gây ra có thể gây tử vong nếu không được phát hiện. Nó có thể tiến từ từ và thậm chí gây ung thư. Trong một số trường hợp, nó có thể không hoạt động trong cơ thể thậm chí 10 – 20 năm. Một số người bị viêm gan C có thể chỉ bị trong thời gian ngắn, nhưng đối với hơn một nửa số người nhiễm vi-rút, nó sẽ tiến triển thành một bệnh nhiễm trùng mãn tính. Chỉ 30% bệnh nhân nhiễm vi rút viêm gan C tự hồi phục trong vòng sáu tháng, trong khi hầu hết bệnh nhân bị nhiễm vi rút mãn tính. Các vấn đề sức khỏe có khả năng gây tử vong có thể do viêm gan C mãn tính là xơ gan và ung thư gan.
+
 Thông thường, những người bị viêm gan C mãn tính không cảm thấy ốm hoặc biểu hiện bất kỳ triệu chứng nào và các triệu chứng chỉ xuất hiện khi bệnh đã tiến triển. Người bệnh có thể bị suy nhược, buồn ngủ và chóng mặt, tất cả đều có thể bị nhầm lẫn với kiệt sức do làm việc hoặc học tập. Đáng sợ hơn khi vắc-xin viêm gan C chưa có. Một xét nghiệm kháng thể được sử dụng để kiểm tra HCV. Những người dương tính với xét nghiệm kháng thể nên trải qua xét nghiệm axit nucleic (NAT) để tìm HCV. Một rào cản lớn trong quá trình điều trị liên tục là quy trình chẩn đoán hai bước, gây khó khăn cho bệnh nhân và dẫn đến bệnh nhân không được theo dõi thường xuyên. 
+
 Nghiên cứu này nhằm mục đích chọn các thuật toán để dự đoán viêm gan C dựa trên thói quen và xét kết quả xét nghiệm.
-2.	Phương pháp: 
+
+3.	Phương pháp:
+   
 Về nghiên cứu này, trong bước đầu tiên, trước khi sử dụng các kỹ thuật học máy, mô hình của bộ dữ liệu, quá trình tiền xử lý và tầm quan trọng của tính năng được xem xét. Bước thứ hai là sử dụng và phát triển các mô hình học máy khác nhau. Cuối cùng, trong bước cuối cùng, hiệu suất của từng mô hình được đánh giá theo ma trận nhầm, độ chính xác, tỉ lệ chuẩn để dự đoán viêm gan C sau khi so sánh hiệu suất của các mô hình này. Các mô hình này được phát triển bằng các chương trình Python.
  
 Hình 1: Mô hình dự đoán viêm gan C.
+
 2.1.	Mô tả tập dữ liệu:
+
 Hai bộ dữ liệu đã được sử dụng trong nghiên cứu này. Bộ dữ liệu NHANES chứa dữ liệu của 148 cá nhân và được lấy từ Trung tâm Kiểm soát Dịch bệnh (CDC) của Hoa Kỳ như một phần của Khảo sát Kiểm tra Sức khỏe và Dinh dưỡng Quốc gia (NHANES). Tính năng liên quan đến viêm gan C đã được chọn từ bộ dữ liệu này: 	
+
 Age	ALB	ALP	ALT	AST	BIL	CHE	CHOL    CREA   GGT     PROT 
+
 Mục tiêu sẽ phân loại các cá nhân thành những người mắc bệnh hoặc không mắc viêm gan C, bao gồm cả sự tiến triển của nó thành xơ hóa và xơ gan.
+
 2.2. Tiền xử lý dữ liệu và tầm quan trọng:
+
 Vì chất lượng dữ liệu là yếu tố quan trọng cần cân nhắc trong quy trình khai thác dữ liệu để dự đoán và chẩn đoán bệnh, nên một quy trình làm sạch dữ liệu đã được sử dụng để làm cho bộ dữ liệu chính xác hơn. Một số thuộc tính trong bộ dữ liệu này có một số giá trị bị thiếu và trùng lặp. Trong nghiên cứu này, phương pháp cắt bỏ trung vị được sử dụng để điền vào các giá trị còn thiếu trong bộ dữ liệu. 
 Phương pháp này được chọn vì nó là một kỹ thuật đơn giản và được sử dụng rộng rãi để xử lý dữ liệu bị thiếu, đặc biệt khi các giá trị bị thiếu được cho là bị thiếu một cách ngẫu nhiên. Giá trị trung bình là một thước đo mạnh mẽ về xu không bị ảnh hưởng bởi các giá trị ngoại lệ và ít có khả năng đưa ra sai lệch trong phân tích so với các phương pháp khác, chẳng hạn như quy nạp trung bình. Nghiên cứu trước đây cũng đã chỉ ra rằng phép loại bỏ trung vị có thể hoạt động tốt khi so sánh với các phương pháp loại bỏ khác về mặt giảm sai lệch và tăng độ chính xác của phân tích. Ngoài ra, phương pháp cắt bỏ trung bình đã được sử dụng trong các nghiên cứu y học khác nhau để xử lý dữ liệu bị thiếu. Do đó, dựa trên tính đơn giản và mạnh mẽ của phương pháp, cũng như thành công của nó trong nghiên cứu trước đây, phương pháp quy nạp trung vị được coi là phù hợp.
 Tiêu chuẩn hóa dữ liệu đã được áp dụng cho các bộ dữ liệu sau khi xử lý dữ liệu bị thiếu, xóa các dữ liệu trùng lặp và chuyển đổi một số tính năng chuỗi thành số, bước tiếp theo là các kỹ thuật đánh giá các đặc điểm đầu vào theo mức độ chúng có thể dự đoán một biến mục tiêu. Trong nghiên cứu này, các phương pháp nhúng đã được sử dụng để tính toán tầm quan trọng của quá trình chuyển đổi chuỗi thành số.
