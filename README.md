@@ -4,38 +4,65 @@
 I.	Tổng Quan:
 
 Tính Trừu tượng: Viêm gan C là một bệnh nhiễm trùng gan do siêu vi khuẩn viêm gan C (HCV) gây ra. Do khởi phát các triệu chứng muộn,  để chuẩn đoán sớm là rất khó. Dự đoán trước khi bị tổn thương gan là quá trình xuyên suốt. Mục tiêu chính của nghiên cứu này là sử dụng thuật toán để dự đoán bệnh dựa trên dữ liệu xét nghiệm để chuẩn đoán và điều trị bệnh ở giai đoạn đầu. Trong nghiên cứu này, các thuật toán sử dụng như  Logistic Regression, Random Forest, Gradient Boosting, Support Vector Machine …. 
+
 Hiệu suất của các kỹ thuật này được so sánh về ma trận để xác định một phương pháp thích hợp để dự đoán bệnh. Phân tích SVM và XGBoost (với độ chính xác và AUC cao nhất trong số các thử nghiệm mẫu, >80%) có thể là công cụ hiệu quả cho các chuyên gia y tế sử dụng xét nghiệm thông thường và là dữ liệu để dự đoán viêm gan C.
-1.	Giới thiệu: 
+
+1.	Giới thiệu:
+   
 Có rất nhiều bệnh ảnh hưởng đến gan của con người. Gan là một trong những bộ phận quan trọng. Bệnh viêm gan C do một loại vi-rút gây ra có thể gây tử vong nếu không được phát hiện. Nó có thể tiến từ từ và thậm chí gây ung thư. Trong một số trường hợp, nó có thể không hoạt động trong cơ thể thậm chí 10 – 20 năm. Một số người bị viêm gan C có thể chỉ bị trong thời gian ngắn, nhưng đối với hơn một nửa số người nhiễm vi-rút, nó sẽ tiến triển thành một bệnh nhiễm trùng mãn tính. Chỉ 30% bệnh nhân nhiễm vi rút viêm gan C tự hồi phục trong vòng sáu tháng, trong khi hầu hết bệnh nhân bị nhiễm vi rút mãn tính. Các vấn đề sức khỏe có khả năng gây tử vong có thể do viêm gan C mãn tính là xơ gan và ung thư gan. 
+
 Thông thường, những người bị viêm gan C mãn tính không cảm thấy ốm hoặc biểu hiện bất kỳ triệu chứng nào và các triệu chứng chỉ xuất hiện khi bệnh đã tiến triển. Người bệnh có thể bị suy nhược, buồn ngủ và chóng mặt, tất cả đều có thể bị nhầm lẫn với kiệt sức do làm việc hoặc học tập. Đáng sợ hơn khi vắc-xin viêm gan C chưa có. Một xét nghiệm kháng thể được sử dụng để kiểm tra HCV. Những người dương tính với xét nghiệm kháng thể nên trải qua xét nghiệm axit nucleic (NAT) để tìm HCV. Một rào cản lớn trong quá trình điều trị liên tục là quy trình chẩn đoán hai bước, gây khó khăn cho bệnh nhân và dẫn đến bệnh nhân không được theo dõi thường xuyên. 
+
 Nghiên cứu này nhằm mục đích chọn các thuật toán để dự đoán viêm gan C dựa trên thói quen và xét kết quả xét nghiệm.
-2.	Phương pháp: 
+
+2.	Phương pháp:
+
 Về nghiên cứu này, trong bước đầu tiên, trước khi sử dụng các kỹ thuật học máy, mô hình của bộ dữ liệu, quá trình tiền xử lý và tầm quan trọng của tính năng được xem xét. Bước thứ hai là sử dụng và phát triển các mô hình học máy khác nhau. Cuối cùng, trong bước cuối cùng, hiệu suất của từng mô hình được đánh giá theo ma trận nhầm, độ chính xác, tỉ lệ chuẩn để dự đoán viêm gan C sau khi so sánh hiệu suất của các mô hình này. Các mô hình này được phát triển bằng các chương trình Python.
  
 Hình 1: Mô hình dự đoán viêm gan C.
+
 2.1.	Mô tả tập dữ liệu:
+
 Hai bộ dữ liệu đã được sử dụng trong nghiên cứu này. Bộ dữ liệu NHANES chứa dữ liệu của 148 cá nhân và được lấy từ Trung tâm Kiểm soát Dịch bệnh (CDC) của Hoa Kỳ như một phần của Khảo sát Kiểm tra Sức khỏe và Dinh dưỡng Quốc gia (NHANES). Tính năng liên quan đến viêm gan C đã được chọn từ bộ dữ liệu này: 	
+
 Age	ALB	ALP	ALT	AST	BIL	CHE	CHOL    CREA   GGT     PROT 
+
 Mục tiêu sẽ phân loại các cá nhân thành những người mắc bệnh hoặc không mắc viêm gan C, bao gồm cả sự tiến triển của nó thành xơ hóa và xơ gan.
+
 2.2. Tiền xử lý dữ liệu và tầm quan trọng:
+
 Vì chất lượng dữ liệu là yếu tố quan trọng cần cân nhắc trong quy trình khai thác dữ liệu để dự đoán và chẩn đoán bệnh, nên một quy trình làm sạch dữ liệu đã được sử dụng để làm cho bộ dữ liệu chính xác hơn. Một số thuộc tính trong bộ dữ liệu này có một số giá trị bị thiếu và trùng lặp. Trong nghiên cứu này, phương pháp cắt bỏ trung vị được sử dụng để điền vào các giá trị còn thiếu trong bộ dữ liệu. 
+
 Phương pháp này được chọn vì nó là một kỹ thuật đơn giản và được sử dụng rộng rãi để xử lý dữ liệu bị thiếu, đặc biệt khi các giá trị bị thiếu được cho là bị thiếu một cách ngẫu nhiên. Giá trị trung bình là một thước đo mạnh mẽ về xu không bị ảnh hưởng bởi các giá trị ngoại lệ và ít có khả năng đưa ra sai lệch trong phân tích so với các phương pháp khác, chẳng hạn như quy nạp trung bình. Nghiên cứu trước đây cũng đã chỉ ra rằng phép loại bỏ trung vị có thể hoạt động tốt khi so sánh với các phương pháp loại bỏ khác về mặt giảm sai lệch và tăng độ chính xác của phân tích. Ngoài ra, phương pháp cắt bỏ trung bình đã được sử dụng trong các nghiên cứu y học khác nhau để xử lý dữ liệu bị thiếu. Do đó, dựa trên tính đơn giản và mạnh mẽ của phương pháp, cũng như thành công của nó trong nghiên cứu trước đây, phương pháp quy nạp trung vị được coi là phù hợp.
+
 Tiêu chuẩn hóa dữ liệu đã được áp dụng cho các bộ dữ liệu sau khi xử lý dữ liệu bị thiếu, xóa các dữ liệu trùng lặp và chuyển đổi một số tính năng chuỗi thành số, bước tiếp theo là các kỹ thuật đánh giá các đặc điểm đầu vào theo mức độ chúng có thể dự đoán một biến mục tiêu. Trong nghiên cứu này, các phương pháp nhúng đã được sử dụng để tính toán tầm quan trọng của quá trình chuyển đổi chuỗi thành số.
+
 Trong học máy, phương pháp nhúng là một kỹ thuật lựa phù hợp nhất trong quá trình đào tạo mô hình. Điều này đạt được bằng cách kết hợp chuyển đổi vào thuật toán được sử dụng để đào tạo mô hình, thay vì thực hiện chuyển đổi như một bước tiền xử lý riêng biệt.
+
 Các phương pháp nhúng hoạt động bằng cách đánh giá tầm quan trọng của việc chuyển đổi trong quá trình đào tạo mô hình và chỉ chọn những phương hướng phù hợp vào độ chính xác của mô hình. Điều này thường đạt được bằng cách gán trọng số hoặc hệ số cho từng tính năng dựa trên chuyển đổi của nó trong mô hình.
+
 2.3. Lựa chọn Model:
+
 Trong nghiên cứu này, sử dụng các thuật toán học máy khác nhau để dự đoán bệnh viêm gan C bằng cách sử dụng dữ liệu xét nghiệm để chẩn đoán và điều trị bệnh ở giai đoạn đầu. Để đạt được mục tiêu này, đã chọn các thuật toán học máy, bao gồm Logistic Regression, Random Forest, Gradient Boosting, Support Vector Machine, dựa trên hiệu quả đã được chứng minh của chúng trong chẩn đoán y khoa. Đối với mỗi thuật toán, sử dụng các siêu tham số để đảm bảo độ chính xác tối đa. Ví dụ: chúng tôi đã sử dụng C = 1.0, gamma = tỷ lệ, hàm nhân = hàm cơ sở radial (RBF) cho SVM và mục tiêu = nhị phân: logistic, learning_rate = 0.2 cho XGBoost. Tương tự, dụng hàm kích hoạt = relu, hidden layer = 3, bộ giải = lbfgs cho Logistic Regression. Sự lựa chọn của những siêu tham số đóng vai trò quan trọng trong việc đạt được độ chính xác cao của các mô hình.
+
 2.4. Đánh giá hiệu suất mô hình:
+
 Các số liệu thống kê khác nhau đã được sử dụng để đánh giá các thuật toán học máy đã phát triển. Thông tin này bao gồm Kết quả xác thực đúng (TP), Kết quả xác thực sai (FP), Kết quả âm tính  (TN) và Kết quả dương tính (FP) với phép đo hiệu suất, đó là ma trận, độ chính xác,…
+
 Xác suất có bệnh khi kết quả dương tính được gọi là giá trị dự đoán dương tính và khi kết quả âm tính, xác suất không bệnh được gọi là giá trị dự đoán âm tính. Ma trận được sử dụng để cung cấp một bản tóm tắt các kết quả dự đoán.
+
 Độ chính xác được xác định bằng mức độ gần đúng của kết quả thu được với giá trị thực của phép đo. Vì lý do này, độ chính xác cũng có thể được tính như sau:
+
 độ chính xác = (TP + TN)/(TP + TN + FP + FN)
+
 3. Kết quả:
+   
 Tổng cộng, 148 cá nhân (59 nữ và 89 nam) và 615 (238 nữ và 377 nam) đã được đưa vào bộ dữ liệu NHANES và UCI tương ứng. Bộ dữ liệu NHANES và bộ dữ liệu UCI sẽ được lọc như hình bên dưới:
  
 Hình 2: ALB: albumin; ALP: Alkaline phosphatase; ALT: alanine aminotransferase; AST: aspartate aminotransferase; BIL: total bilirubin; CHE: serum cholinesterase; PROT: total protein; CHOL: cholesterol; GGT: y-glutamyl transferase; CREA:creatinine blood (CREA); BIL: bilirubin.
  
 Hình 3: Bản đồ nhiệt cho mối quan hệ giữa các thuộc tính khác nhau dựa trên bộ dữ liệu.
+
 Sau khi xử lý dữ liệu bị thiếu, loại bỏ các dữ liệu trùng lặp và chuyển đổi một số tính năng chuỗi thành số, tiêu chuẩn hóa dữ liệu đã được áp dụng cho các bộ dữ liệu. Phân tích tương quan đã được thực hiện sau đó. Bản đồ nhiệt được minh họa trong Hình ở trên được sử dụng để hiển thị mối tương quan giữa các tính năng trong bộ dữ liệu này. Sau đó, giá trị của tầm quan trọng của tính năng được tính toán để xếp hạng các tính năng theo phương pháp nhúng. Thứ hạng tầm quan trọng của các tính năng trong bộ dữ liệu được hiển thị trong Hình bên dưới. Theo phân tích này, trọng số các tính năng này, giới tính có tầm quan trọng thấp nhất và AST có tầm quan trọng nhất trong bộ dữ liệu này.
  
 Hình 4: Tầm quan trọng của tính năng dựa trên bộ dữ liệu.
@@ -46,7 +73,9 @@ Hình 5: các mô hình và vẽ ma trận trong ô con tương ứng.
 Hình 6: Tỉ lệ độ chính xác.
  
 Hình 7:Tầm quan trọng của tính năng.
+
 4. Thảo luận:
+   
 Dựa trên các kết quả thử nghiệm, kỹ thuật SVM và XGBoost có thể được sử dụng làm công cụ hiệu quả sử dụng dữ liệu xét nghiệm thông thường và không tốn kém để dự đoán bệnh viêm gan C. Qua nhiều năm, các kỹ thuật học máy đã được sử dụng trong dự đoán bệnh. Kết quả cũng xác nhận rằng thuật toán XGBoost là một mô hình chính xác cho dự đoán viêm gan C. 
 Mặc dù biểu đồ bản đồ nhiệt cho thấy tuổi tác và giới tính có mối tương quan yếu với các đặc điểm khác, nhưng có một số bằng chứng và nghiên cứu cho thấy chúng là những yếu tố quan trọng liên quan đến bệnh viêm gan C. Một tổng quan hệ thống và phân tích tổng hợp để đánh giá và phân tích sự khác biệt về giới trong bệnh viêm gan C liên quan đến tỷ lệ nhiễm vi-rút. Phát hiện ra rằng tỷ lệ dương tính với HCV RNA ở nam giới trưởng thành cao hơn đáng kể so với nữ giới. Phụ nữ cũng tiến triển với tốc độ chậm hơn nam giới nếu họ bị nhiễm mãn tính.
  
@@ -57,5 +86,7 @@ Tuổi tác là tình trạng dẫn đến mất dần khả năng duy trì cân
 Nhược điểm của nghiên cứu này là không phải tất cả các tính năng quan trọng đều có thể được giữ lại trong bộ dữ liệu, đây là điển hình của phân tích dữ liệu thứ cấp.
  
 Hình 10: tuổi và loại sau khi chuyển đổi.
+
 II.	Kết Luận:
+
 Tóm lại, nghiên cứu này nhằm mục đích sử dụng các kỹ thuật học máy khác nhau để dự đoán bệnh viêm gan C dựa trên dữ liệu xét nghiệm máu định kỳ. Kết quả chứng minh rằng các kỹ thuật SVM và XGBoost có hiệu quả trong chẩn đoán viêm gan C ở giai đoạn đầu với độ chính xác và AUC cao (>80%). Phân tích trên cũng xác định các tính năng quan trọng như ALT, ALB, ALP, AST, TBIL, PROT, CHOL, CHE, GGT, CREA, giới tính và độ tuổi có thể được sử dụng trong các kỹ thuật này. Tuy nhiên, nghiên cứu còn một số hạn chế, bao gồm việc sử dụng các bộ dữ liệu hạn chế, thiếu dữ liệu lâm sàng và không có thử nghiệm lâm sàng. Trong tương lai, mong muốn kết hợp các tính năng bổ sung liên quan đến viêm gan C để phát triển các kỹ thuật máy học hiệu quả và đáng tin cậy hơn. Nhìn chung, nghiên cứu cho kết quả đầy mong đợi trong việc phát hiện và chẩn đoán sớm bệnh viêm gan C bằng các kỹ thuật học máy, điều này cuối cùng có thể cải thiện kết quả điều trị của người mắc bệnh.
