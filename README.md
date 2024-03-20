@@ -21,7 +21,6 @@ Về nghiên cứu này, trong bước đầu tiên, trước khi sử dụng c�
 
  <img src="https://drive.google.com/file/d/1hptEQzLGTxbxXn76INFYw-zIwxD4kjef/view?usp=drive_link">
 
-
 2.1.	Mô tả tập dữ liệu:
 
 Hai bộ dữ liệu đã được sử dụng trong nghiên cứu này. Bộ dữ liệu NHANES chứa dữ liệu của 148 cá nhân và được lấy từ Trung tâm Kiểm soát Dịch bệnh (CDC) của Hoa Kỳ như một phần của Khảo sát Kiểm tra Sức khỏe và Dinh dưỡng Quốc gia (NHANES). Tính năng liên quan đến viêm gan C đã được chọn từ bộ dữ liệu này: 	
