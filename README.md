@@ -1,7 +1,7 @@
 # ChuanDoanViemGanC_HepatitisCPrediction_MachineLearning
 # Chuẩn Đoán Viêm Gan Siêu Vi C   (Hepatitis C Prediction)
 
-----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 ## MỤC LỤC:
 
 I.	Tổng Quan:
