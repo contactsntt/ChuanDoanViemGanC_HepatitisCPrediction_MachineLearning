@@ -3,15 +3,25 @@
 
 ----------------------------------------------------------------------------------
 ## MỤC LỤC:
-I.	Tổng Quan:	
-1.	Giới thiệu:	1
-2.	Phương pháp:	
-2.1.	Mô tả tập dữ liệu:	
-2.2. Tiền xử lý dữ liệu và tầm quan trọng:	
-2.3. Lựa chọn Model:	
-2.4. Đánh giá hiệu suất mô hình:	
+
+I.	Tổng Quan:
+
+   1.	Giới thiệu:
+   
+   2.	Phương pháp:	
+
+      2.1.	Mô tả tập dữ liệu:	
+
+      2.2. Tiền xử lý dữ liệu và tầm quan trọng:	
+      
+      2.3. Lựa chọn Model:	
+      
+      2.4. Đánh giá hiệu suất mô hình:	
+
 3. Kết quả:	
+
 4. Thảo luận:	
+
 II.	Kết Luận:	
 
 ----------------------------------------------------------------------------------------
