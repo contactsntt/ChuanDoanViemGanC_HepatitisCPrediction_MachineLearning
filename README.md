@@ -1,6 +1,21 @@
 # ChuanDoanViemGanC_HepatitisCPrediction_MachineLearning
 # Chuẩn Đoán Viêm Gan Siêu Vi C   (Hepatitis C Prediction)
 
+----------------------------------------------------------------------------------
+## MỤC LỤC:
+I.	Tổng Quan:	
+1.	Giới thiệu:	1
+2.	Phương pháp:	
+2.1.	Mô tả tập dữ liệu:	
+2.2. Tiền xử lý dữ liệu và tầm quan trọng:	
+2.3. Lựa chọn Model:	
+2.4. Đánh giá hiệu suất mô hình:	
+3. Kết quả:	
+4. Thảo luận:	
+II.	Kết Luận:	
+
+----------------------------------------------------------------------------------------
+
 I.	Tổng Quan:
 
 Tính Trừu tượng: Viêm gan C là một bệnh nhiễm trùng gan do siêu vi khuẩn viêm gan C (HCV) gây ra. Do khởi phát các triệu chứng muộn,  để chuẩn đoán sớm là rất khó. Dự đoán trước khi bị tổn thương gan là quá trình xuyên suốt. Mục tiêu chính của nghiên cứu này là sử dụng thuật toán để dự đoán bệnh dựa trên dữ liệu xét nghiệm để chuẩn đoán và điều trị bệnh ở giai đoạn đầu. Trong nghiên cứu này, các thuật toán sử dụng như  Logistic Regression, Random Forest, Gradient Boosting, Support Vector Machine …. 
